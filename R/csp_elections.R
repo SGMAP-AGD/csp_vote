@@ -3,6 +3,7 @@ pr <- read.dta("hackathon_baseselec.dta")
 
 prcsv <- merge(csp5, pr , by = "code_insee", all.x = TRUE, all.y = FALSE)
 
+write.table(prcsv, file = "data/pr_csp.csv", row.names = FALSE, sep = ",", dec = ".")
 png("output/ouvriers_ps_1981.png", width = 420, height = 380)
 prcsv %>% 
   filter(!is.na(ps_81t1)) %>% 
@@ -52,3 +53,4 @@ prcsv %>%
   theme_blaquans() + 
   labs(title = "Vote PS et part des ouvriers (2012)", x = "Part d'ouvriers dans la population active en 2011", y = "Part de vote du PS au 1er tour, 2012")
 dev.off()
+
