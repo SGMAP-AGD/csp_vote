@@ -147,6 +147,10 @@ reg blanc_nul_evolution2 sh2_evolution2
 reg blanc_nul_evolution2 sh3_evolution2 
 reg blanc_nul_evolution2 sh4_evolution2
 twoway (sc ps_evolution2 sh1_evolution2) (lfit ps_evolution2 sh1_evolution2) if sh1_evolution2 > -0.1 & sh1_evolution2 < 0.05
+graph save graph1.png, replace
 twoway (sc ps_evolution2 sh2_evolution2) (lfit ps_evolution2 sh2_evolution2) if sh2_evolution2 > -0.4 & sh2_evolution2 < 0.1
+graph save graph2.png, replace
 twoway (sc ps_evolution2 sh3_evolution2) (lfit ps_evolution2 sh3_evolution2) if sh3_evolution2 > -0.1 & sh3_evolution2 < 0.05
+graph save graph3.png, replace
 twoway (sc ps_evolution2 sh4_evolution2) (lfit ps_evolution2 sh4_evolution2) if sh4_evolution2 > 0 & sh4_evolution2 < 0.5
+graph save graph4.png, replace
