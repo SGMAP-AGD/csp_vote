@@ -1,5 +1,6 @@
 # Données socio-démographiques et comportement électoral
 
+* Projet mené avec @vinpons, @ineslevy, @sl956 et @blaquans
 * [pad du projet](https://lite5.framapad.org/p/cspvote)
 
 ## Données utilisées
