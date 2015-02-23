@@ -1,4 +1,7 @@
 pr <- read.dta("hackathon_baseselec.dta")
+
+
+
 all <- merge(rp_secteur5, pr , by = "code_insee", all.x = TRUE, all.y = FALSE)
 
 png("output/voteps_shareindustrie_1981.png", width = 420, height = 380)
