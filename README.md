@@ -28,7 +28,7 @@ On apparie les données en fonction du recensement le plus proche
 
 
 
-## Effet du secteur d'activité de la population sur le vote PS
+## Effet de l'évolution du secteur d'activité sur l'évolution du vote PS entre 1981 et 2012
 
 ![image](graph1.png)
 
