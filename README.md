@@ -68,3 +68,7 @@ BTP
 
 Tertiaire
 
+
+## Effet de la part de l'industrie sur le vote PS de 1981 à 2012
+
+![image](graph_coefplot.png)
