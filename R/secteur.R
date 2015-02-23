@@ -78,4 +78,8 @@ rp_secteur4 <- rp_secteur3 %>%
   spread(key = secteur, value = share) 
 names(rp_secteur4) <- sub(pattern = "([1-4])", replacement = "sh\\1", x = names(rp_secteur4))
 
-write.table(data = )
+ rp_secteur5 <- reshape(data = data.frame(rp_secteur4), direction = "wide", idvar = "code_insee", timevar = "annee")
+
+write.table(rp_secteur4, file = "data/rp_secteur4.csv", row.names = FALSE, sep = ",", dec = ".")
+
+write.table(rp_secteur5, file = "data/rp_secteur5.csv", row.names = FALSE, sep = ",", dec = ".")
