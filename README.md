@@ -20,9 +20,31 @@ On apparie les données en fonction du recensement le plus proche
 * l'élection de 2007 est appariée au recensement de 2006
 * l'élection de 2012 est appariée au recensement de 2011
 
-## Effet du secteur d'activité de la population sur le vote PS
+
+
+## Effet par commune de la part d'ouvriers dans la population active sur le vote PS
+
+![image](output/ouvriers_ps_1981.png)
+
+![image](output/ouvriers_ps_1988.png)
+
+![image](output/ouvriers_ps_2002.png)
+
+![image](output/ouvriers_ps_2007.png)
+
+![image](output/ouvriers_ps_2012.png)
+
+
+
+## Effet par commune de la part de la population active travaillant dans l'industrie sur le vote PS
 
 ![image](output/voteps_shareindustrie_1981.png)
+
+![image](output/voteps_shareindustrie_1988.png)
+
+![image](output/voteps_shareindustrie_2002.png)
+
+![image](output/voteps_shareindustrie_2007.png)
 
 ![image](output/voteps_shareindustrie_2012.png)
 
@@ -32,8 +54,17 @@ On apparie les données en fonction du recensement le plus proche
 
 ![image](graph1.png)
 
+Agriculture
+
 ![image](graph2.png)
+
+Industrie
 
 ![image](graph3.png)
 
+BTP
+
 ![image](graph4.png)
+
+Tertiaire
+
