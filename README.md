@@ -28,3 +28,12 @@ On apparie les données en fonction du recensement le plus proche
 
 
 
+## Effet du secteur d'activité de la population sur le vote PS
+
+![image](graph1.png)
+
+![image](graph2.png)
+
+![image](graph3.png)
+
+![image](graph4.png)
