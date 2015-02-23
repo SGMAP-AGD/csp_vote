@@ -65,37 +65,37 @@ reg participation_95t1 sh2_1999 sh3_1999 sh4_1999
 
 * Effet sur participation, toutes les communes
 
-reg blanc_12t1 sh2_2011 sh3_2011 sh4_2011
-reg blanc_07t1 sh2_2006 sh3_2006 sh4_2006
-reg blanc_02t1 sh2_1999 sh3_1999 sh4_1999
-reg blanc_95t1 sh2_1999 sh3_1999 sh4_1999
+reg blanc_nul_12t1 sh2_2011 sh3_2011 sh4_2011
+reg blanc_nul_07t1 sh2_2006 sh3_2006 sh4_2006
+reg blanc_nul_02t1 sh2_1999 sh3_1999 sh4_1999
+reg blanc_nul_95t1 sh2_1999 sh3_1999 sh4_1999
 
 * Effet sur score PS, communes de plus de 9000 habitants
 
-reg ps_12t1 sh2_2011 sh3_2011 sh4_2011 if participation_81t1 ~= .
-reg ps_07t1 sh2_2006 sh3_2006 sh4_2006 if participation_81t1 ~= .
-reg ps_02t1 sh2_1999 sh3_1999 sh4_1999 if participation_81t1 ~= .
-reg ps_95t1 sh2_1999 sh3_1999 sh4_1999 if participation_81t1 ~= .
-reg ps_88t1 sh2_1990 sh3_1990 sh4_1990 if participation_81t1 ~= .
-reg ps_81t1 sh2_1982 sh3_1982 sh4_1982 if participation_81t1 ~= .
+reg ps_12t1 sh1_2011 sh2_2011 sh4_2011 if participation_81t1 ~= .
+reg ps_07t1 sh1_2006 sh2_2006 sh4_2006 if participation_81t1 ~= .
+reg ps_02t1 sh1_1999 sh2_1999 sh4_1999 if participation_81t1 ~= .
+reg ps_95t1 sh1_1999 sh2_1999 sh4_1999 if participation_81t1 ~= .
+reg ps_88t1 sh1_1990 sh2_1990 sh4_1990 if participation_81t1 ~= .
+reg ps_81t1 sh1_1982 sh2_1982 sh4_1982 if participation_81t1 ~= .
 
 * Effet sur participation, communes de plus de 9000 habitants
 
-reg participation_12t1 sh2_2011 sh3_2011 sh4_2011 if participation_81t1 ~= .
-reg participation_07t1 sh2_2006 sh3_2006 sh4_2006 if participation_81t1 ~= .
-reg participation_02t1 sh2_1999 sh3_1999 sh4_1999 if participation_81t1 ~= .
-reg participation_95t1 sh2_1999 sh3_1999 sh4_1999 if participation_81t1 ~= .
-reg participation_88t1 sh2_1990 sh3_1990 sh4_1990 if participation_81t1 ~= .
-reg participation_81t1 sh2_1982 sh3_1982 sh4_1982 if participation_81t1 ~= .
+reg participation_12t1 sh1_2011 sh2_2011 sh4_2011 if participation_81t1 ~= .
+reg participation_07t1 sh1_2006 sh2_2006 sh4_2006 if participation_81t1 ~= .
+reg participation_02t1 sh1_1999 sh2_1999 sh4_1999 if participation_81t1 ~= .
+reg participation_95t1 sh1_1999 sh2_1999 sh4_1999 if participation_81t1 ~= .
+reg participation_88t1 sh1_1990 sh2_1990 sh4_1990 if participation_81t1 ~= .
+reg participation_81t1 sh1_1982 sh2_1982 sh4_1982 if participation_81t1 ~= .
 
 * Effet sur participation, communes de plus de 9000 habitants
 
-reg blanc_nul_12t1 sh2_2011 sh3_2011 sh4_2011 if participation_81t1 ~= .
-reg blanc_nul_07t1 sh2_2006 sh3_2006 sh4_2006 if participation_81t1 ~= .
-reg blanc_nul_02t1 sh2_1999 sh3_1999 sh4_1999 if participation_81t1 ~= .
-reg blanc_nul_95t1 sh2_1999 sh3_1999 sh4_1999 if participation_81t1 ~= .
-reg blanc_nul_88t1 sh2_1990 sh3_1990 sh4_1990 if participation_81t1 ~= .
-reg blanc_nul_81t1 sh2_1982 sh3_1982 sh4_1982 if participation_81t1 ~= .
+reg blanc_nul_12t1 sh1_2011 sh2_2011 sh4_2011 if participation_81t1 ~= .
+reg blanc_nul_07t1 sh1_2006 sh2_2006 sh4_2006 if participation_81t1 ~= .
+reg blanc_nul_02t1 sh1_1999 sh2_1999 sh4_1999 if participation_81t1 ~= .
+reg blanc_nul_95t1 sh1_1999 sh2_1999 sh4_1999 if participation_81t1 ~= .
+reg blanc_nul_88t1 sh1_1990 sh2_1990 sh4_1990 if participation_81t1 ~= .
+reg blanc_nul_81t1 sh1_1982 sh2_1982 sh4_1982 if participation_81t1 ~= .
 
 *** Evolution
 
@@ -147,10 +147,10 @@ reg blanc_nul_evolution2 sh2_evolution2
 reg blanc_nul_evolution2 sh3_evolution2 
 reg blanc_nul_evolution2 sh4_evolution2
 twoway (sc ps_evolution2 sh1_evolution2) (lfit ps_evolution2 sh1_evolution2) if sh1_evolution2 > -0.1 & sh1_evolution2 < 0.05
-graph save graph1.png, replace
+graph export graph1.png, replace
 twoway (sc ps_evolution2 sh2_evolution2) (lfit ps_evolution2 sh2_evolution2) if sh2_evolution2 > -0.4 & sh2_evolution2 < 0.1
-graph save graph2.png, replace
+graph export graph2.png, replace
 twoway (sc ps_evolution2 sh3_evolution2) (lfit ps_evolution2 sh3_evolution2) if sh3_evolution2 > -0.1 & sh3_evolution2 < 0.05
-graph save graph3.png, replace
+graph export graph3.png, replace
 twoway (sc ps_evolution2 sh4_evolution2) (lfit ps_evolution2 sh4_evolution2) if sh4_evolution2 > 0 & sh4_evolution2 < 0.5
-graph save graph4.png, replace
+graph export graph4.png, replace
