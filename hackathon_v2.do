@@ -72,12 +72,21 @@ reg blanc_nul_95t1 sh2_1999 sh3_1999 sh4_1999
 
 * Effet sur score PS, communes de plus de 9000 habitants
 
+gen temp = sh2_1999
 reg ps_12t1 sh1_2011 sh2_2011 sh4_2011 if participation_81t1 ~= .
+estimates store ps12
 reg ps_07t1 sh1_2006 sh2_2006 sh4_2006 if participation_81t1 ~= .
+estimates store ps07
 reg ps_02t1 sh1_1999 sh2_1999 sh4_1999 if participation_81t1 ~= .
-reg ps_95t1 sh1_1999 sh2_1999 sh4_1999 if participation_81t1 ~= .
+estimates store ps02
+reg ps_95t1 sh1_1999 temp sh4_1999 if participation_81t1 ~= .
+estimates store ps95
 reg ps_88t1 sh1_1990 sh2_1990 sh4_1990 if participation_81t1 ~= .
+estimates store ps88
 reg ps_81t1 sh1_1982 sh2_1982 sh4_1982 if participation_81t1 ~= .
+estimates store ps81
+coefplot (ps12, label(2012)) (ps07, label(2007)) (ps02, label(2002)) (ps95, label(1995)) (ps88, label(1988)) (ps81, label(1981)), ///
+drop(_cons) keep(sh2_2011 sh2_2006 sh2_1999 temp sh2_1995 sh2_1990 sh2_1988 sh2_1982) xline(0)
 
 * Effet sur participation, communes de plus de 9000 habitants
 
