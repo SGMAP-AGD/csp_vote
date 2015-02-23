@@ -22,6 +22,9 @@ On apparie les données en fonction du recensement le plus proche
 
 ## Effet du secteur d'activité de la population sur le vote PS
 
- 
+![image](output/voteps_shareindustrie_1981.png)
+
+![image](output/voteps_shareindustrie_2012.png)
+
 
 
